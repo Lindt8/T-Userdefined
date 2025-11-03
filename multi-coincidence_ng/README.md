@@ -7,6 +7,7 @@ these requirements can be specified individually for both neutron interactions a
 
 This tally can be thought as something similar to a combination of the [T-Deposit2] (but with the number of detectors involved set arbitrarily rather than limited to 2) and [T-Product] tallies, producing something similar to a 
 "dump" file but with "history counters" `chmax(1)` and `chmax(2)` allowed and enforced.
+(Note: The implementation is not using the actual “history counter” function of PHITS, but rather its own custom implementation achieving a similar effect.)
 
 This tally was developed with a "camera-style" detector in mind that requires, for particle imaging, neutrons to undergo two interactions and gamma rays three interactions, each in a different region (scintillator bar) of the geometry (detector array). 
 It outputs, for each coincidence event satisfying scoring criteria, the region number, energy deposition, interaction coordinates, and time of each interaction, along with additional identifying information and (optionally) extra information about the nature of the interactions. 
