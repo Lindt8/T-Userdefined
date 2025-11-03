@@ -106,7 +106,7 @@ After the header block displaying column header information, each coincident eve
 If additional reaction information writing is selected/enabled, immediately following each `ne`/`ge` line is at least one `rx` reaction line including information for each reaction. 
 This line's reaction information, in order, is: `ncol`, `mathz`, `mathn`, `jcoll`, `kcoll`, `nclsts`, `nocas`, `no`, `name`, cell number, x coordinate, y coordinate, and z coordinate. 
 It is then followed by an `In` line with the kf-code, incident energy, and incident particle weight of the particle initiating the reaction.
-This is then followed by an `Out` line with the kf-code, energy, and particle weight of the produced particle(s), delimited by commas `,`.
+This is then followed by an `Out` line with the kf-code, energy, and particle weight of the exiting/produced particle(s), delimited by commas `,`.
 
 These `rx` blocks allow more accurate determination of **how** energy was deposited (recoil nucleus species, whether multiple collisions occured in a single detector region, etc.).
 
