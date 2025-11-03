@@ -56,8 +56,8 @@ In the [T-Userdefined] tally section in a PHITS input, values should be set as f
 In either case, the following first `N` entries for `udtvar`, `udtvar(1)` through `udtvar(N)`, should each be provided one cell number of a "detector" region involved in the coincidence logic.
 
 Then, if `nudtvar` was set to `N` + 6, the following can also be specified:
-- `udtvar(N+1)` / `udtvar(nudtvar-5)` = number of regions with above threshold neutron energy deposition required to be scored, "required `chmax(1)`"
-- `udtvar(N+2)` / `udtvar(nudtvar-4)` = number of regions with above threshold gamma-ray energy deposition required to be scored, "required `chmax(2)`"
+- `udtvar(N+1)` / `udtvar(nudtvar-5)` = number of regions with above threshold neutron energy deposition required to be scored, "required `chmax(1)`" (including E_dep threshold)
+- `udtvar(N+2)` / `udtvar(nudtvar-4)` = number of regions with above threshold gamma-ray energy deposition required to be scored, "required `chmax(2)`" (including E_dep threshold)
 - `udtvar(N+3)` / `udtvar(nudtvar-3)` = minimum energy deposit threshold (in MeV) for neutrons to be recorded; if not exceeded, event is considered "not detected/detectable"
 - `udtvar(N+4)` / `udtvar(nudtvar-2)` = minimum energy deposit threshold (in MeV) for gamma rays to be recorded; if not exceeded, event is considered "not detected/detectable"
 - `udtvar(N+5)` / `udtvar(nudtvar-1)` = toggle for writing of extra informational reaction lines (`1`=yes, `0`=no), more info below
