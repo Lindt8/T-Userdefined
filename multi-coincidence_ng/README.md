@@ -153,4 +153,14 @@ rx 14   0   0 13  0   3    117867         6         1         210              2
  Out        22  7.7937E-01  1.0000E+00 ,        11  6.0067E+00  1.0000E+00 ,        11  1.4000E-05  1.0000E+00
 ```
 
+## Extra details
 
+If curious about how something akin to the "history counter" feature was implemented here, at a high level this code does the following:
+
+  * A large empty string `outstr` is initialized as a buffer that, every history, is being (1) potentially outputted to `file`, (2) reset, and (3) written to.
+    * (well, only *every* history when `udtvar(N+5)` / `udtvar(nudtvar-1)` is set to `1`). 
+    * Smaller helper strings `tmpstr` and `tmpstrb` are also initialized.
+  * `outstr` and its helper strings are written to every history—throughout the history—without knowledge of whether it will eventually be written to the output file.   
+  * `outstr` only ever gets written to the actual output `file` at the start of each new history (or end of final history), when `ncol .eq. 4` (or `ncol .eq. 2`), and only if any of the "history counter" criteria were satisfied in the previous history.  
+    * There are extra variables preserving information from one history into the next, which, after criteria checking and any potential following writing to output `file` occurs, are then reset along with `outstr`.
+    * This happens in the "`ncol .eq. 4` / source" phase at the start of each history (or `ncol .eq. 2` at the very end of the final history).
