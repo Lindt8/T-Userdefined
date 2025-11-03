@@ -10,7 +10,7 @@ This tally can be thought as something similar to a combination of the [T-Deposi
 
 This tally was developed with a "camera-style" detector in mind that requires, for particle imaging, neutrons to undergo two interactions and gamma rays three interactions, each in a different region (scintillator bar) of the geometry (detector array). 
 It outputs, for each coincidence event satisfying scoring criteria, the region number, energy deposition, interaction coordinates, and time of each interaction, along with additional identifying information and (optionally) extra information about the nature of the interactions. 
-In this way, it minimally emulates the output of a real detector system (interaction energy deposition and location), though without the associated experimental systematic uncertainties, necessary for particle imaging 
+In this way, it minimally emulates the output of a real detector system (interaction energy deposition, location, and timing), though without the associated experimental systematic uncertainties, necessary for particle imaging 
 but also allows a much more detailed look at what exact interactions contribute to the energy deposition in each interaction only available in simulation.
 
 ## PHITS Input
