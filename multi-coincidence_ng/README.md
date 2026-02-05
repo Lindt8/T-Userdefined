@@ -2,6 +2,8 @@
 
 ## About
 
+_Note: While this works perfectly for neutrons, there is currently an issue [#1](https://github.com/Lindt8/T-Userdefined/issues/1) with accurate scoring of gamma energy depositions._
+
 This tally allows event-by-event "list-mode" collection of events with arbitrarily-set minimum number of required interaction coincidences (as inputted and then evaluated by a [Counter]) each satisfying a set minimum energy deposition threshold; 
 these requirements can be specified individually for both neutron interactions and gamma-ray interactions. An arbitrarily long list of cells/regions treated within the coincidence logic can be provided.
 
